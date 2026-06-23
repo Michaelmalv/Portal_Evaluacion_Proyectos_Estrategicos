@@ -73,7 +73,7 @@ const CATEGORIAS_INFO = {
   },
   'Rehabilitación del Espacio Público': {
     image: '/imagenes_categorias/rehabilitacion_espacio_publico/rehabilitacion_ch.png',
-    summary: 'Revitalización de calles patrimoniales y viaductos para conectar peatonalmente y reactivar el comercio nocturno.',
+    summary: 'Revitalización de calles patrimoniales para conectar peatonalmente y reactivar el comercio nocturno.',
     content: (
       <div className="article-content">
         <h1>Rehabilitación del Espacio Público</h1>
@@ -87,23 +87,15 @@ const CATEGORIAS_INFO = {
           <li><strong>Terrazas Urbanas:</strong> Autorización para la colocación de mesas en las veredas por parte de cafeterías y restaurantes (con un ancho máximo de 2.50 m). Esto promueve la estrategia de <em>"ojos en la calle"</em> y mejora la seguridad ciudadana a través de la activación económica.</li>
           <li><strong>Galerías Culturales Urbanas:</strong> Utilización de muros ciegos y fachadas patrimoniales para la proyección nocturna de imágenes informativas, artísticas y culturales de la ciudad (<em>mapping</em>), como en la fachada de la Iglesia de la Compañía de Jesús.</li>
         </ul>
-
-        <h3>Recuperación del Viaducto de la 24 de Mayo</h3>
-        <p>Transformación integral de la infraestructura del viaducto subterráneo para <strong>conectar de forma segura la superficie con el transporte masivo</strong>. El proyecto incorpora:</p>
-        <ul>
-          <li><strong>Bahía técnica:</strong> Espacio exclusivo para la carga y descarga segura de pasajeros.</li>
-          <li><strong>Seguridad vial:</strong> Señalización técnica diseñada para la reducción de velocidad vehicular.</li>
-          <li><strong>Túnel peatonal:</strong> Conexión subterránea bajo la calle Cuenca que guía de forma directa a los usuarios hacia el hall del subsuelo de la estación del Metro.</li>
-        </ul>
       </div>
     )
   },
-  'Bicentenario': {
+  'Arena del Bicentenario': {
     image: '/imagenes_categorias/bicentenario/bicentenario.png',
     summary: 'Megaproyecto de renovación urbana de 105 hectáreas que integra humedales, ciclovías, deportes y una arena para conciertos.',
     content: (
       <div className="article-content">
-        <h1>Bicentenario</h1>
+        <h1>Arena del Bicentenario</h1>
         <div className="info-alert">
           La repotenciación de las 105 hectáreas del antiguo aeropuerto representa el proyecto de renovación y revitalización urbana más ambicioso del Distrito Metropolitano. Proyectado bajo las normativas del Plan de Uso y Gestión del Suelo (PUGS), este espacio técnico tiene el potencial de albergar vivienda y servicios para una población de hasta 304.000 habitantes, frenando la expansión descontrolada de las periferias.
         </div>
@@ -128,6 +120,14 @@ const CATEGORIAS_INFO = {
         <ul>
           <li><strong>Arena de Espectáculos Quito:</strong> Megaestructura equipada con un escenario principal con capacidad para <strong>50.000 espectadores</strong>, diseñado para insertar a la capital en el circuito internacional de grandes conciertos, festivales y ferias masivas.</li>
           <li><strong>Anfiteatro Polifuncional:</strong> Espacio cultural al aire libre totalmente integrado al paisaje del parque, el cual utiliza relieves técnicos y graderíos naturales de césped para albergar eventos artísticos y comunitarios.</li>
+        </ul>
+
+        <h3>Otros Proyectos Asociados</h3>
+        <p>Como parte de la estrategia integral de revitalización del sector del Bicentenario y el eje norte de la ciudad, se contemplan las siguientes intervenciones:</p>
+        <ul>
+          <li><strong>Repotenciación Parque Bicentenario:</strong> Proyecto enfocado en la consolidación de la infraestructura verde, plantación de árboles nativos, y equipamiento deportivo y recreativo de escala metropolitana.</li>
+          <li><strong>Quitopia:</strong> Centro de desarrollo comunitario, cuidado familiar e innovación social que ofrece servicios gratuitos de recreación, cultura y capacitación en el entorno del parque.</li>
+          <li><strong>Recuperación Urbana Av. 10 de Agosto:</strong> Plan integral para revitalizar el principal eje vial longitudinal, recuperando fachadas patrimoniales, ensanchando aceras y fomentando el uso residencial de densidad media.</li>
         </ul>
       </div>
     )

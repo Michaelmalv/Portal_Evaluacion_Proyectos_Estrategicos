@@ -377,38 +377,34 @@ export default function SeguridadPage() {
             </button>
           </div>
 
-          {/* Desglose de Proyección 2026 */}
-          <div className="card">
-            <h3 style={{ marginBottom: '1rem' }}>Proyecciones 2026 (Obs. / Proy.)</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>
-              Método: Media Móvil 2023-2025 (Blend 60/40). Muestra los datos observados acumulados y el total del año proyectado.
+          {/* Metodología de Proyección 2026 */}
+          <div className="card" style={{ borderLeft: '4px solid var(--accent-color, #3b82f6)' }}>
+            <h3 style={{ marginBottom: '1rem', color: 'var(--accent-color, #3b82f6)' }}>Metodología de Proyección Anual 2026</h3>
+            <p style={{ color: 'var(--text-color)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1.25rem' }}>
+              Para estimar los indicadores de seguridad de todo el año 2026, se utiliza un modelo de promedio ponderado que combina la tendencia observada del año actual con el comportamiento histórico:
             </p>
-            <div className="table-container">
-              <table className="custom-table">
-                <thead>
-                  <tr>
-                    <th>Variable</th>
-                    <th>Observado 2026 (Ene-Abr)</th>
-                    <th>Estimado Restante</th>
-                    <th>Total Proyectado 2026</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {ALL_VARS.map(v => {
-                    const obs = currentStats.find(s => s.anio === '2026*' && s.variable === v)?.valor || 0;
-                    const proy = proyecciones2026[v] || 0;
-                    const restante = Math.max(0, Math.round(proy - obs));
-                    return (
-                      <tr key={v}>
-                        <td><strong>{v}</strong></td>
-                        <td>{obs || '-'}</td>
-                        <td>{restante || '-'}</td>
-                        <td><strong>{Math.round(proy) || '-'}</strong></td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
+              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                <h4 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#60a5fa' }}>1. Tendencia Reciente (Peso 60%)</h4>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0, lineHeight: '1.4' }}>
+                  Se toma el valor observado de enero a abril de 2026 (4 meses), se calcula su promedio mensual y se proyecta para los 12 meses. Esto permite reflejar las dinámicas de seguridad del presente año.
+                </p>
+              </div>
+              
+              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.02)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                <h4 style={{ marginBottom: '0.5rem', fontSize: '0.9rem', color: '#60a5fa' }}>2. Base Histórica (Peso 40%)</h4>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0, lineHeight: '1.4' }}>
+                  Se calcula el promedio histórico anual de los incidentes registrados entre 2023 y 2025. Funciona como un regulador estadístico que evita sobrestimaciones causadas por picos atípicos.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.01)', padding: '0.75rem', borderRadius: '6px', border: '1px dashed rgba(255, 255, 255, 0.08)', textAlign: 'center' }}>
+              <strong style={{ fontSize: '0.85rem', display: 'block', marginBottom: '0.25rem' }}>Fórmula de Ponderación Mixta:</strong>
+              <code style={{ fontSize: '0.9rem', color: 'var(--accent-color, #60a5fa)', fontFamily: 'monospace' }}>
+                Proyección 2026 = (Proyección Simple 2026 × 0.60) + (Media Histórica 2023-2025 × 0.40)
+              </code>
             </div>
           </div>
 
