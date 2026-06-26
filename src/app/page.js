@@ -91,7 +91,7 @@ const CATEGORIAS_INFO = {
     )
   },
   'Arena del Bicentenario': {
-    image: '/imagenes_categorias/bicentenario/Bicentenario.png',
+    image: '/imagenes_categorias/bicentenario/bicentenario.png',
     summary: 'Megaproyecto de renovación urbana de 105 hectáreas que integra humedales, ciclovías, deportes y una arena para conciertos.',
     content: (
       <div className="article-content">
