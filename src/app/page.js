@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const CATEGORIAS_INFO = {
   'Senderos Seguros': {
-    image: '/imagenes_categorias/senderos_seguros/senderos_seguros.png',
+    image: '/imagenes_categorias/senderos_seguros/Senderos Seguros.png',
     summary: 'Corredores peatonales diseñados estratégicamente para mitigar índices delictivos y mejorar la seguridad de transeúntes.',
     content: (
       <div className="article-content">
@@ -43,7 +43,7 @@ const CATEGORIAS_INFO = {
     )
   },
   'Zonas Metro': {
-    image: '/imagenes_categorias/zonas_metro/zonas_metro.jpg',
+    image: '/imagenes_categorias/zonas_metro/Zonas metro.jpg',
     summary: 'Modelo de ordenamiento físico-espacial en los exteriores de las estaciones para ordenar el flujo peatonal masivo.',
     content: (
       <div className="article-content">
@@ -72,7 +72,7 @@ const CATEGORIAS_INFO = {
     )
   },
   'Rehabilitación del Espacio Público': {
-    image: '/imagenes_categorias/rehabilitacion_espacio_publico/rehabilitacion_ch.png',
+    image: '/imagenes_categorias/rehabilitacion_espacio_publico/Rehabilitación del Centro Historico.jpg',
     summary: 'Revitalización de calles patrimoniales para conectar peatonalmente y reactivar el comercio nocturno.',
     content: (
       <div className="article-content">
@@ -91,7 +91,7 @@ const CATEGORIAS_INFO = {
     )
   },
   'Arena del Bicentenario': {
-    image: '/imagenes_categorias/bicentenario/bicentenario.png',
+    image: '/imagenes_categorias/bicentenario/Bicentenario.png',
     summary: 'Megaproyecto de renovación urbana de 105 hectáreas que integra humedales, ciclovías, deportes y una arena para conciertos.',
     content: (
       <div className="article-content">
@@ -133,7 +133,7 @@ const CATEGORIAS_INFO = {
     )
   },
   'Arena del Sur': {
-    image: '/imagenes_categorias/arena_del_sur/arena_del_sur.png',
+    image: '/imagenes_categorias/arena_del_sur/Arena del Sur.png',
     summary: 'Infraestructura cultural multifuncional en Quitumbe con centro cultural y plaza de espectáculos al aire libre.',
     content: (
       <div className="article-content">
@@ -160,6 +160,84 @@ const CATEGORIAS_INFO = {
         <ul>
           <li><strong>Encuentro ciudadano:</strong> Funciona como un espacio para articular actividades artísticas, educativas y recreativas.</li>
           <li><strong>Fomento de la cohesión:</strong> Busca promover la apropiación pacífica del espacio público, la cohesión social y el bienestar de la población del sur de Quito.</li>
+        </ul>
+      </div>
+    )
+  },
+  'Repotenciación Parque Bicentenario': {
+    image: '/imagenes_categorias/repotenciacion_parque_bicentenario/Repotenciación del Bicentenario.png',
+    summary: 'Consolidación del espacio verde del antiguo aeropuerto mediante arborización nativa y nuevas áreas recreativas.',
+    content: (
+      <div className="article-content">
+        <h1>Repotenciación Parque Bicentenario</h1>
+        <div className="info-alert">
+          La <strong>Repotenciación del Parque Bicentenario</strong> busca consolidar las áreas verdes públicas de este gran pulmón de la zona centro-norte, incrementando la densidad de arbolado y facilitando servicios urbanos integrados.
+        </div>
+
+        <h3>Ejes de Intervención Ambiental</h3>
+        <p>El plan ambiental está diseñado para mitigar la isla de calor y potenciar los ecosistemas urbanos:</p>
+        <ul>
+          <li><strong>Bosque Urbano:</strong> Siembra masiva de árboles nativos y arbustos adaptados a la altitud de Quito.</li>
+          <li><strong>Humedales de Captación:</strong> Zonas inundables técnicas para regular el ciclo hídrico local y captar aguas lluvias.</li>
+        </ul>
+
+        <h3>Áreas Recreativas y Deportivas</h3>
+        <p>Se integran nuevos servicios y áreas para el sano esparcimiento comunitario:</p>
+        <ul>
+          <li><strong>Circuitos de Trote y Ciclismo:</strong> Senderos con señalización y pavimento permeable.</li>
+          <li><strong>Equipamiento Infantil:</strong> Zonas lúdicas adaptadas para niños de diferentes grupos de edad.</li>
+        </ul>
+      </div>
+    )
+  },
+  'Quitopia': {
+    image: '/imagenes_categorias/quitopia/Quitopia.png',
+    summary: 'Red de centros de desarrollo comunitario y cuidado integral para el bienestar social de las familias.',
+    content: (
+      <div className="article-content">
+        <h1>Quitopia</h1>
+        <div className="info-alert">
+          <strong>Quitopia</strong> representa el nuevo modelo metropolitano de equipamiento para el bienestar social, reuniendo servicios de cuidado, cultura, recreación y aprendizaje en zonas urbanas estratégicas.
+        </div>
+
+        <h3>Servicios del Sistema de Cuidado</h3>
+        <p>Cada sede ofrece atención prioritaria para familias y grupos vulnerables:</p>
+        <ul>
+          <li><strong>Salud y Nutrición:</strong> Asistencia médica básica preventiva y programas de soberanía alimentaria.</li>
+          <li><strong>Apoyo Psicológico y Legal:</strong> Consultorios de mediación y defensoría comunitaria.</li>
+        </ul>
+
+        <h3>Espacios de Aprendizaje y Cohesión</h3>
+        <p>Fomento de la innovación y la participación ciudadana:</p>
+        <ul>
+          <li><strong>Aulas de Capacitación Técnica:</strong> Talleres de emprendimiento, artes aplicadas y herramientas digitales.</li>
+          <li><strong>Áreas Verdes y Lúdicas:</strong> Parques integrados para el juego libre y huertos comunitarios educativos.</li>
+        </ul>
+      </div>
+    )
+  },
+  'Recuperación Urbana Av. 10 de Agosto': {
+    image: '/imagenes_categorias/recuperacion_urbana_av_10_de_agosto/recuperación_urbana_av10deAgosto.png',
+    summary: 'Estrategia de revitalización del eje vial longitudinal de la 10 de Agosto para mejorar movilidad y vivienda.',
+    content: (
+      <div className="article-content">
+        <h1>Recuperación Urbana Av. 10 de Agosto</h1>
+        <div className="info-alert">
+          La <strong>Recuperación Urbana de la Av. 10 de Agosto</strong> es un plan estratégico enfocado en rehabilitar este histórico eje vial longitudinal de Quito, promoviendo el uso de suelo mixto y de vivienda de densidad media.
+        </div>
+
+        <h3>Renovación Vial y Peatonal</h3>
+        <p>Se proponen cambios de sección vial y paisajismo para devolver calidad al espacio público:</p>
+        <ul>
+          <li><strong>Soterramiento de Redes:</strong> Retiro de cableado aéreo en fachadas para mejorar el paisaje urbano.</li>
+          <li><strong>Aceras Seguras:</strong> Ampliación y nivelación de plataformas peatonales con diseño universal.</li>
+        </ul>
+
+        <h3>Desarrollo Inmobiliario e Incentivos</h3>
+        <p>Estrategias económicas para reactivar el poblamiento ordenado del eje norte:</p>
+        <ul>
+          <li><strong>Incentivos para Vivienda:</strong> Facilidades y exoneraciones para proyectos de densificación residencial.</li>
+          <li><strong>Comercio en Planta Baja:</strong> Fomento de galerías activas y locales comerciales dinámicos.</li>
         </ul>
       </div>
     )
