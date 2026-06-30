@@ -12,14 +12,11 @@ export const CATEGORIAS_INFO = {
         <div className="info-alert">
           Las Quitopías representan el modelo de gestión territorial más ambicioso del Distrito Metropolitano de Quito. Funcionan como una <strong>red descentralizada de equipamientos comunitarios multisectoriales</strong> que superan la fragmentación institucional para garantizar los derechos, el cuidado, la cultura y la convivencia social de las familias de la capital. 
         </div>
-        <div className="detail-image-container">
-          <img src="/imagenes_categorias/quitopia/extracted_1.png" alt="Concepto" />
-        </div>
         <p>Inspirado en los mejores referentes globales de urbanismo social, este proyecto transforma infraestructuras subutilizadas en centralidades vivas donde se articulan de manera directa los servicios públicos, la academia y la comunidad. </p>
-        <h3>Ficha Técnica y Datos de Impacto (Nodo Piloto: Quitopía "La Y")</h3>
         <div className="detail-image-container">
-          <img src="/imagenes_categorias/quitopia/extracted_2.png" alt="Ficha Técnica" />
+          <img src="/imagenes_categorias/quitopia/extracted_1.png" alt="Detalle" />
         </div>
+        <h3>Ficha Técnica y Datos de Impacto (Nodo Piloto: Quitopía "La Y")</h3>
         <ul>
           <li><strong>Área Total de Intervención:</strong> Un ecosistema urbano integral de <strong>19.544,98m²</strong> distribuidos de manera estratégica en tres frentes de obra: </li>
         </ul>
@@ -30,6 +27,9 @@ export const CATEGORIAS_INFO = {
           <li><strong>Inversión Pública Consolidada:</strong> <strong>USD 10'398.332,77</strong> financiados por el Municipio de Quito y distribuidos en edificación matriz (USD 8'862.893,44), espacio público verde (USD 678.486,17) y urbanización periférica (USD 856.953,16). </li>
           <li><strong>Cronograma y Estado de Obra:</strong> Las intervenciones viales y del pasaje peatonal arrancaron en marzo de 2025, mientras que la edificación central inició en noviembre de 2025. El proyecto registra un avance físico general del 75% y su entrega definitiva está programada para <strong>julio de 2026</strong>. </li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_2.png" alt="Detalle" />
+        </div>
         <h3>Componentes y Servicios del Complejo Integrado</h3>
         <p>La Quitopía rompe los esquemas tradicionales dividiendo su infraestructura en tres grandes bloques funcionales diseñados para todas las edades: </p>
         <h3>1. Edificio de Capacitación, Innovación y Cultura (Bloque A)</h3>
@@ -39,6 +39,9 @@ export const CATEGORIAS_INFO = {
           <li><strong>Expresión y Multimedia:</strong> Un estudio y cabina de grabación profesional con convocatorias abiertas para colectivos musicales y comunitarios. </li>
           <li><strong>Salas Multifuncionales:</strong> Espacios destinados a la danza, artes plásticas, expresión corporal y un gimnasio público con programas de entrenamiento funcional guiado. </li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_3.png" alt="Detalle" />
+        </div>
         <h3>2. Edificio Centro de los Cuidados (Bloque B)</h3>
         <p>La columna vertebral del proyecto, diseñada para aliviar la carga de trabajo doméstico y de cuidado, brindando un soporte integral a las familias: </p>
         <p><strong>Centro Infantil "Quito</strong> <strong>Wawas</strong><strong>":</strong> Un espacio seguro y lúdico para el cuidado y la estimulación de la primera infancia. </p>
@@ -46,16 +49,22 @@ export const CATEGORIAS_INFO = {
           <li><strong>Lactario:</strong> Área especializada, higiénica y confortable habilitada para la libre lactancia. </li>
           <li><strong>Cuidado Intergeneracional:</strong> Módulos de lavandería comunitaria bajo reserva, y salas destinadas a actividades lúdicas, talleres de memoria y diálogo para adultos mayores. </li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_4.png" alt="Detalle" />
+        </div>
         <h3>3. Edificio Teatro - Polideportivo (Bloque C)</h3>
         <p>El punto de encuentro para el esparcimiento masivo, la cultura y la salud preventiva: </p>
         <ul>
           <li><strong>Teatro - Cinemateca:</strong> Una moderna sala con capacidad para 450 personas diseñada para lanzamientos artísticos, proyecciones culturales y encuentros ciudadanos. </li>
           <li><strong>Infraestructura Deportiva:</strong> Préstamo de canchas por horas, copas interbarriales y programas permanentes de salud preventiva en articulación con las entidades municipales. </li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_5.png" alt="Detalle" />
+        </div>
         <h3>Sostenibilidad Urbana y Gestión Ambiental</h3>
         <p>El entorno exterior de la Quitopía funciona como un amortiguador ecológico de la ciudad. Incorpora soluciones basadas en la naturaleza, como <strong>jardines de lluvia y humedales</strong> conectados a un tanque de retención de aguas lluvias, diseñados específicamente para mitigar las históricas inundaciones de la Av. 10 de Agosto. Todo el perímetro cuenta con criterios de accesibilidad universal, soterramiento de redes, pacificación de tránsito y un parque lineal que integra la vida vecinal con el comercio local regularizado. </p>
         <div className="detail-image-container">
-          <img src="/imagenes_categorias/quitopia/extracted_6.png" alt="Quitopía Fin" />
+          <img src="/imagenes_categorias/quitopia/extracted_6.png" alt="Detalle" />
         </div>
       </div>
     )
@@ -115,13 +124,16 @@ export const CATEGORIAS_INFO = {
         </ul>
         <p>Fase 1 (Pacificadores): Construcción de amplias plataformas de pacificación vial y mejoramiento de cruces peatonales accesibles en las intersecciones con las calles Holanda (950 m²) y Bélgica (800 m²), incorporando adoquines podotáctiles y bolardos disuasivos. </p>
         <p>Fase 2 (Bulevar y Arborización): Derrocamiento de la estructura de la tribuna, ampliación y reconfiguración de la acera este, arborización con especies nativas y la instalación de 21 estructuras arquitectónicas con <strong>iluminación LED ornamental</strong> rotativa. </p>
-        <h3>2. Calle Benalcázar (Eje Centro Histórico)</h3>
         <div className="detail-image-container">
-          <img src="/imagenes_categorias/rehabilitacion_espacio_publico/extracted_2.jpeg" alt="Calle Benalcázar" />
+          <img src="/imagenes_categorias/rehabilitacion_espacio_publico/extracted_1.jpeg" alt="Detalle" />
         </div>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/rehabilitacion_espacio_publico/extracted_2.jpeg" alt="Detalle" />
+        </div>
+        <h3>2. Calle Benalcázar (Eje Centro Histórico)</h3>
         <ul>
-          <li><strong>Estrategia de Intervención:</strong> Proyecto prioritario enmarcado en la <strong>Primera Fase de Recuperación Urbana del Centro Histórico (CHQ)</strong>, orientado a revertir el paradigma del uso del vehículo y rescatar la caminabilidad patrimonial[cite: 1, 10].</li>
-          <li><strong>Alcance de la Obra:</strong> Intervención a lo largo de un eje continuo de <strong>0.8km</strong> de longitud que sirve como conector directo hacia la estación de Metro San Francisco y los principales equipamientos culturales del casco colonial[cite: 1, 10].</li>
+          <li><strong>Estrategia de Intervención:</strong> Proyecto prioritario enmarcado en la <strong>Primera Fase de Recuperación Urbana del Centro Histórico (CHQ)</strong>, orientado a revertir el paradigma del uso del vehículo y rescatar la caminabilidad patrimonial.</li>
+          <li><strong>Alcance de la Obra:</strong> Intervención a lo largo de un eje continuo de <strong>0.8km</strong> de longitud que sirve como conector directo hacia la estación de Metro San Francisco y los principales equipamientos culturales del casco colonial.</li>
         </ul>
         <h3>Mejoras en el Espacio Público:</h3>
         <p>Ensanchamiento general de aceras y colocación de bandas podotáctiles para accesibilidad universal. </p>
@@ -129,9 +141,9 @@ export const CATEGORIAS_INFO = {
         <p>Arborización urbana mediante la dotación de alcorques técnicos e instalación de mobiliario con iluminación pública peatonal homogénea. </p>
         <h3>3. Calle Rocafuerte (Conectividad San Roque - La Loma)</h3>
         <ul>
-          <li><strong>Alcance e Inversión:</strong> Proyecto integral a cargo del Instituto Metropolitano de Patrimonio (IMP) y la SHOT, con una extensión de <strong>0.9km</strong> ejecutados entre el Arco de Santo Domingo y la Plaza de la Mama Cuchara (alcanzando los 1.90km en el circuito general de intervención)[cite: 1, 12]. Representa una inversión aproximada de <strong>USD 1.16</strong> <strong>millones</strong>[cite: 1, 12].</li>
-          <li><strong>Espacio Público Ganado:</strong> Recuperación de <strong>2.830 m²</strong> de superficie de rodadura que pasó a ser de uso exclusivo para el peatón mediante ampliación geométrica de aceras[cite: 1, 12].</li>
-          <li><strong>Beneficiarios Directos:</strong> 20.250 habitantes de los barrios residenciales tradicionales de La Loma y San Roque, priorizando las zonas seguras al contorno de la UEM Fernández Madrid[cite: 1, 10, 12].</li>
+          <li><strong>Alcance e Inversión:</strong> Proyecto integral a cargo del Instituto Metropolitano de Patrimonio (IMP) y la SHOT, con una extensión de <strong>0.9km</strong> ejecutados entre el Arco de Santo Domingo y la Plaza de la Mama Cuchara (alcanzando los 1.90km en el circuito general de intervención). Representa una inversión aproximada de <strong>USD 1.16</strong> <strong>millones</strong>.</li>
+          <li><strong>Espacio Público Ganado:</strong> Recuperación de <strong>2.830 m²</strong> de superficie de rodadura que pasó a ser de uso exclusivo para el peatón mediante ampliación geométrica de aceras.</li>
+          <li><strong>Beneficiarios Directos:</strong> 20.250 habitantes de los barrios residenciales tradicionales de La Loma y San Roque, priorizando las zonas seguras al contorno de la UEM Fernández Madrid.</li>
           <li><strong>Manejo Urbano Integrado:</strong> Redistribución de los flujos de tráfico vehicular, operativos interinstitucionales de control del comercio autónomo informal (AMC y Cuerpo de Agentes) y campañas de seguridad vial los fines de semana. </li>
         </ul>
         <h3>4. Parque Navarro (Plaza de las Tripas - La Floresta)</h3>
@@ -156,9 +168,6 @@ export const CATEGORIAS_INFO = {
         <div className="info-alert">
           El proyecto de <strong>Repotenciación del Parque Metropolitano Bicentenario</strong> consolida este espacio histórico como el principal pulmón verde, recreativo, cultural y de desarrollo urbano del norte de Quito. Aprovechando los terrenos del antiguo aeropuerto, la intervención no solo amplía la cobertura vegetal de la ciudad, sino que introduce un modelo de centralidad urbana sostenible. 
         </div>
-        <div className="detail-image-container">
-          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_1.png" alt="Concepto" />
-        </div>
         <p>Bajo la coordinación técnica de la Secretaría de Hábitat y Ordenamiento Territorial (SHOT) y en cumplimiento del Plan de Uso y Gestión del Suelo (PUGS), el parque equilibra la preservación ecológica con la inserción de infraestructura deportiva de alto rendimiento y espacios masivos para la cultura y el turismo internacional. </p>
         <h3>Ficha Técnica y Datos de Impacto</h3>
         <ul>
@@ -170,28 +179,31 @@ export const CATEGORIAS_INFO = {
         <h3>Zonificación Estratégica y Componentes del Parque</h3>
         <p>El desarrollo del parque metropolitano se divide en zonas especializadas para garantizar un uso múltiple y equilibrado del suelo: </p>
         <h3>1. Zona Recreativa Deportiva y de Alto Rendimiento</h3>
-        <div className="detail-image-container">
-          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_2.png" alt="Zona Deportiva" />
-        </div>
         <ul>
           <li><strong>Red de Caminerías e Iluminación:</strong> Construcción de <strong>12km de caminerías internas</strong> distribuidas en 5 tipologías que integran ciclovías, espacios de estancia y áreas comerciales modulares. </li>
           <li><strong>Circuito de Ruedas:</strong> Implementación de una pista técnica de BMX, tres pistas especializadas de velocidad/patinaje y una red perimetral de 14.4km de ciclovías exclusivas. </li>
           <li><strong>Canchas Multifuncionales:</strong> El complejo deportivo integra <strong>67 canchas</strong> planificadas para el esparcimiento (21 de fútbol, 19 de voleibol, 11 de básquet, 7 de tenis, 3 de balonmano, 1 de béisbol y 5 de uso múltiple). </li>
         </ul>
-        <h3>2. Zona de Conservación Ecológica y Cuerpos de Agua</h3>
         <div className="detail-image-container">
-          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_3.png" alt="Zona de Conservación" />
+          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_1.png" alt="Detalle" />
         </div>
+        <h3>2. Zona de Conservación Ecológica y Cuerpos de Agua</h3>
         <ul>
           <li><strong>Reserva Forestal:</strong> Siembra masiva de árboles nativos agrupados por zonas climáticas para potenciar la biodiversidad, la captura de carbono y la recuperación de suelos. </li>
           <li><strong>Lagunas Reguladoras:</strong> Creación de <strong>15.000 m² en cuerpos de agua</strong> (6 humedales y lagunas de retención) diseñados como infraestructura verde-azul para la captación de aguas lluvias y control de escorrentías. </li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_2.png" alt="Detalle" />
+        </div>
         <h3>3. Zona de Espectáculos y Encuentro Cultural</h3>
         <ul>
           <li><strong>Arena de Espectáculos Quito:</strong> Un gran nodo cultural modular y flexible diseñado con un escenario principal con capacidad para <strong>50.000 espectadores</strong> y un escenario secundario para 4.000 personas, insertando de forma definitiva a la capital en el circuito internacional de eventos masivos. </li>
           <li><strong>Anfiteatro Polifuncional:</strong> Una estructura al aire libre totalmente integrada a la topografía del parque, diseñada para expresiones artísticas locales y comunitarias. </li>
           <li><strong>Equipamiento Vecinal:</strong> Distribución técnica de 14 plazas duras, 18 zonas lúdicas de primera infancia, 38 áreas de picnic equipadas, 12 zonas de gimnasios biosaludables al aire libre, 10 bloques de baños públicos y 5 parques caninos (dogparks) organizados.</li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_3.png" alt="Detalle" />
+        </div>
       </div>
     )
   },
@@ -205,9 +217,6 @@ export const CATEGORIAS_INFO = {
         <p>Los <strong>Senderos Seguros</strong> son corredores de circulación diseñados estratégicamente para mejorar la percepción de seguridad en el espacio público, mitigar los índices delictivos y promover el flujo de transeúntes en zonas identificadas como vulnerables.</p>
         <p>Su origen se inspira en proyectos exitosos de ciudades como México, adaptados a la realidad de la capital ecuatoriana para erradicar problemáticas como el acoso y la violencia de género en las calles.</p>
         <h3>Metodología de Identificación y Priorización</h3>
-        <div className="detail-image-container">
-          <img src="/imagenes_categorias/senderos_seguros/extracted_2.png" alt="Priorización" />
-        </div>
         <p>Para identificar los corredores que requieren intervención prioritaria, las secretarías metropolitanas analizan el territorio utilizando una <strong>matriz técnica basada en 6 dimensiones urbanas y 18 indicadores</strong>:</p>
         <ul>
           <li><strong>Seguridad ciudadana:</strong> Monitoreo de actos delictivos (robos a personas), focos de venta de droga y estadísticas de atropellamientos a transeúntes.</li>
@@ -217,6 +226,9 @@ export const CATEGORIAS_INFO = {
           <li><strong>Capital social:</strong> Proximidad y articulación con centros comunitarios como Casas Somos, Centros de Desarrollo Infantil (CDI) y Centros de Equidad y Justicia (CEJ).</li>
           <li><strong>Acceso a transporte público:</strong> Conectividad e intermodalidad con paradas del Metro, paradas de Buses de Tránsito Rápido (BTR) y paradas de buses convencionales.</li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/senderos_seguros/extracted_1.png" alt="Detalle" />
+        </div>
         <h3>Tipos de Intervención en el Territorio</h3>
         <p>Las obras se dividen en dos líneas de acción complementarias:</p>
         <ul>
@@ -229,6 +241,9 @@ export const CATEGORIAS_INFO = {
           <li><strong>Av. Colón (2.000 m):</strong> Eje multimodal que articula el transporte público. Incluye reformas geométricas para accesibilidad, alcorques para arbolado urbano, luminarias solares y sistemas de videovigilancia.</li>
           <li><strong>Intervenciones Zonales:</strong> Proyectos adaptados a las particularidades de cada sector en: Los Chillos (El Tingo), Eloy Alfaro (Av. Michelena), Quitumbe (Chillogallo), Manuela Sáenz (Caldas y Antepara), Calderón (Av. Carapungo) e Eugenio Espejo (Isla Tortuga).</li>
         </ul>
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/senderos_seguros/extracted_2.png" alt="Detalle" />
+        </div>
       </div>
     )
   },
@@ -244,7 +259,7 @@ export const CATEGORIAS_INFO = {
         </div>
         <ul>
           <li><strong>Zona A - Aglomeración:</strong> Es el área colindante inmediata a la boca de ingreso del Metro. Está destinada de forma <strong>exclusiva</strong> a garantizar la entrada y salida fluida y segura de los pasajeros, por lo que debe mantenerse completamente libre de obstáculos.</li>
-          <li><strong>Zona B - Concentración:</strong> Funciona como una franja o área de amortiguamiento urbano. In este espacio se permite la instalación regulada de <strong>mobiliario confortable</strong> (bancas, basureros, iluminación) diseñado para la permanencia o espera de los usuarios.</li>
+          <li><strong>Zona B - Concentración:</strong> Funciona como una franja o área de amortiguamiento urbano. En este espacio se permite la instalación regulada de <strong>mobiliario confortable</strong> (bancas, basureros, iluminación) diseñado para la permanencia o espera de los usuarios.</li>
           <li><strong>Zona C - Dispersión:</strong> Es el área abierta perimetral. Está perfilada como el lugar idóneo para la colocación de <strong>señalética de orientación</strong>, paradas de transporte complementario y casetas de <strong>comerciantes autónomos regularizados</strong> bajo el debido proceso de autorización.</li>
         </ul>
 
