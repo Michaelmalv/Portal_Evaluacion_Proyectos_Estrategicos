@@ -4,7 +4,7 @@ import React from 'react';
 export const CATEGORIAS_INFO = {
   'Quitopia': {
     image: '/imagenes_categorias/quitopia/Quitopia.png',
-    summary: 'Concepto del Proyecto...',
+    summary: 'Red de centros de desarrollo comunitario y cuidado integral para el bienestar social de las familias.',
     content: (
       <div className="article-content">
         <h1>Quitopía</h1>
@@ -63,7 +63,7 @@ export const CATEGORIAS_INFO = {
 
   'Recuperación Urbana Av. 10 de Agosto': {
     image: '/imagenes_categorias/recuperacion_urbana_av_10_de_agosto/recuperación_urbana_av10deAgosto.png',
-    summary: 'El proyecto de Revitalización de la Av. 10 de Agosto es una estrategia de renovación urbana de gran escala y con enfoque...',
+    summary: 'Estrategia de revitalización del eje vial longitudinal de la 10 de Agosto para mejorar movilidad y vivienda.',
     content: (
       <div className="article-content">
         <h1>Recuperación Urbana Av. 10 de Agosto</h1>
@@ -103,7 +103,7 @@ export const CATEGORIAS_INFO = {
 
   'Rehabilitación del Espacio Público': {
     image: '/imagenes_categorias/rehabilitacion_espacio_publico/Rehabilitación del Centro Historico.jpg',
-    summary: 'Concepto del Proyecto: Transformación radical de la Av. De los Shyris mediante el derrocamiento de la antigua Tribuna pa...',
+    summary: 'Revitalización de calles patrimoniales para conectar peatonalmente y reactivar el comercio nocturno.',
     content: (
       <div className="article-content">
         <h1>Rehabilitación del Espacio Público</h1>
@@ -149,7 +149,7 @@ export const CATEGORIAS_INFO = {
 
   'Repotenciación Parque Bicentenario': {
     image: '/imagenes_categorias/repotenciacion_parque_bicentenario/Repotenciación del Bicentenario.png',
-    summary: 'El proyecto de Repotenciación del Parque Metropolitano Bicentenario consolida este espacio histórico como el principal p...',
+    summary: 'Consolidación del espacio verde del antiguo aeropuerto mediante arborización nativa y nuevas áreas recreativas.',
     content: (
       <div className="article-content">
         <h1>Repotenciación Parque Bicentenario</h1>
@@ -198,7 +198,7 @@ export const CATEGORIAS_INFO = {
 
   'Senderos Seguros': {
     image: '/imagenes_categorias/senderos_seguros/Senderos Seguros.png',
-    summary: 'Su origen se inspira en proyectos exitosos de ciudades como México, adaptados a la realidad de la capital ecuatoriana pa...',
+    summary: 'Corredores peatonales diseñados estratégicamente para mitigar índices delictivos y mejorar la seguridad de transeúntes.',
     content: (
       <div className="article-content">
         <h1>Senderos Seguros</h1>
