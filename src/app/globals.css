@@ -660,6 +660,21 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9rem;
 }
 
+.detail-image-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.detail-image-container img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
 /* --- Media y Ajustes Pequeños --- */
 @media (max-width: 768px) {
   .portal-header-banner {

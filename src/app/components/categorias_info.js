@@ -12,13 +12,13 @@ export const CATEGORIAS_INFO = {
         <div className="info-alert">
           Las Quitopías representan el modelo de gestión territorial más ambicioso del Distrito Metropolitano de Quito. Funcionan como una <strong>red descentralizada de equipamientos comunitarios multisectoriales</strong> que superan la fragmentación institucional para garantizar los derechos, el cuidado, la cultura y la convivencia social de las familias de la capital. 
         </div>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/quitopia/extracted_1.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Concepto" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_1.png" alt="Concepto" />
         </div>
         <p>Inspirado en los mejores referentes globales de urbanismo social, este proyecto transforma infraestructuras subutilizadas en centralidades vivas donde se articulan de manera directa los servicios públicos, la academia y la comunidad. </p>
         <h3>Ficha Técnica y Datos de Impacto (Nodo Piloto: Quitopía "La Y")</h3>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/quitopia/extracted_2.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Ficha Técnica" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_2.png" alt="Ficha Técnica" />
         </div>
         <ul>
           <li><strong>Área Total de Intervención:</strong> Un ecosistema urbano integral de <strong>19.544,98m²</strong> distribuidos de manera estratégica en tres frentes de obra: </li>
@@ -54,8 +54,8 @@ export const CATEGORIAS_INFO = {
         </ul>
         <h3>Sostenibilidad Urbana y Gestión Ambiental</h3>
         <p>El entorno exterior de la Quitopía funciona como un amortiguador ecológico de la ciudad. Incorpora soluciones basadas en la naturaleza, como <strong>jardines de lluvia y humedales</strong> conectados a un tanque de retención de aguas lluvias, diseñados específicamente para mitigar las históricas inundaciones de la Av. 10 de Agosto. Todo el perímetro cuenta con criterios de accesibilidad universal, soterramiento de redes, pacificación de tránsito y un parque lineal que integra la vida vecinal con el comercio local regularizado. </p>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/quitopia/extracted_6.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Quitopía Fin" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/quitopia/extracted_6.png" alt="Quitopía Fin" />
         </div>
       </div>
     )
@@ -116,8 +116,8 @@ export const CATEGORIAS_INFO = {
         <p>Fase 1 (Pacificadores): Construcción de amplias plataformas de pacificación vial y mejoramiento de cruces peatonales accesibles en las intersecciones con las calles Holanda (950 m²) y Bélgica (800 m²), incorporando adoquines podotáctiles y bolardos disuasivos. </p>
         <p>Fase 2 (Bulevar y Arborización): Derrocamiento de la estructura de la tribuna, ampliación y reconfiguración de la acera este, arborización con especies nativas y la instalación de 21 estructuras arquitectónicas con <strong>iluminación LED ornamental</strong> rotativa. </p>
         <h3>2. Calle Benalcázar (Eje Centro Histórico)</h3>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/rehabilitacion_espacio_publico/extracted_2.jpeg" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Calle Benalcázar" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/rehabilitacion_espacio_publico/extracted_2.jpeg" alt="Calle Benalcázar" />
         </div>
         <ul>
           <li><strong>Estrategia de Intervención:</strong> Proyecto prioritario enmarcado en la <strong>Primera Fase de Recuperación Urbana del Centro Histórico (CHQ)</strong>, orientado a revertir el paradigma del uso del vehículo y rescatar la caminabilidad patrimonial[cite: 1, 10].</li>
@@ -156,8 +156,8 @@ export const CATEGORIAS_INFO = {
         <div className="info-alert">
           El proyecto de <strong>Repotenciación del Parque Metropolitano Bicentenario</strong> consolida este espacio histórico como el principal pulmón verde, recreativo, cultural y de desarrollo urbano del norte de Quito. Aprovechando los terrenos del antiguo aeropuerto, la intervención no solo amplía la cobertura vegetal de la ciudad, sino que introduce un modelo de centralidad urbana sostenible. 
         </div>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_1.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Concepto" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_1.png" alt="Concepto" />
         </div>
         <p>Bajo la coordinación técnica de la Secretaría de Hábitat y Ordenamiento Territorial (SHOT) y en cumplimiento del Plan de Uso y Gestión del Suelo (PUGS), el parque equilibra la preservación ecológica con la inserción de infraestructura deportiva de alto rendimiento y espacios masivos para la cultura y el turismo internacional. </p>
         <h3>Ficha Técnica y Datos de Impacto</h3>
@@ -170,8 +170,8 @@ export const CATEGORIAS_INFO = {
         <h3>Zonificación Estratégica y Componentes del Parque</h3>
         <p>El desarrollo del parque metropolitano se divide en zonas especializadas para garantizar un uso múltiple y equilibrado del suelo: </p>
         <h3>1. Zona Recreativa Deportiva y de Alto Rendimiento</h3>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_2.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Zona Deportiva" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_2.png" alt="Zona Deportiva" />
         </div>
         <ul>
           <li><strong>Red de Caminerías e Iluminación:</strong> Construcción de <strong>12km de caminerías internas</strong> distribuidas en 5 tipologías que integran ciclovías, espacios de estancia y áreas comerciales modulares. </li>
@@ -179,8 +179,8 @@ export const CATEGORIAS_INFO = {
           <li><strong>Canchas Multifuncionales:</strong> El complejo deportivo integra <strong>67 canchas</strong> planificadas para el esparcimiento (21 de fútbol, 19 de voleibol, 11 de básquet, 7 de tenis, 3 de balonmano, 1 de béisbol y 5 de uso múltiple). </li>
         </ul>
         <h3>2. Zona de Conservación Ecológica y Cuerpos de Agua</h3>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_3.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Zona de Conservación" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/repotenciacion_parque_bicentenario/extracted_3.png" alt="Zona de Conservación" />
         </div>
         <ul>
           <li><strong>Reserva Forestal:</strong> Siembra masiva de árboles nativos agrupados por zonas climáticas para potenciar la biodiversidad, la captura de carbono y la recuperación de suelos. </li>
@@ -205,8 +205,8 @@ export const CATEGORIAS_INFO = {
         <p>Los <strong>Senderos Seguros</strong> son corredores de circulación diseñados estratégicamente para mejorar la percepción de seguridad en el espacio público, mitigar los índices delictivos y promover el flujo de transeúntes en zonas identificadas como vulnerables.</p>
         <p>Su origen se inspira en proyectos exitosos de ciudades como México, adaptados a la realidad de la capital ecuatoriana para erradicar problemáticas como el acoso y la violencia de género en las calles.</p>
         <h3>Metodología de Identificación y Priorización</h3>
-        <div style={{ margin: "1.5rem 0" }}>
-          <img src="/imagenes_categorias/senderos_seguros/extracted_2.png" style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)" }} alt="Priorización" />
+        <div className="detail-image-container">
+          <img src="/imagenes_categorias/senderos_seguros/extracted_2.png" alt="Priorización" />
         </div>
         <p>Para identificar los corredores que requieren intervención prioritaria, las secretarías metropolitanas analizan el territorio utilizando una <strong>matriz técnica basada en 6 dimensiones urbanas y 18 indicadores</strong>:</p>
         <ul>
