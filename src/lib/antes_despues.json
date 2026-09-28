@@ -55,20 +55,20 @@
   },
   {
     "proyecto": "Calle Benalcazar",
-    "titulo": "Transformación Urbana — Calle Benalcázar",
-    "subtitulo": "Recuperación patrimonial, repavimentación y arborización en el Centro Histórico",
-    "descripcion": "Evidencia de la intervención integral en el eje patrimonial de la Calle Benalcázar: renovación de la calzada vial, retiro de bolardos plásticos deteriorados, incorporación de jardineras urbanas con arbolado ornamental, restauración de fachadas y balcones coloniales y priorización de la caminabilidad y el turismo seguro en el Centro Histórico de Quito.",
+    "titulo": "Transformación Urbana — Calle Benalcázar (Plaza San Francisco)",
+    "subtitulo": "Ampliación peatonal, terrazas gastronómicas y restauración patrimonial",
+    "descripcion": "Evidencia de la regeneración urbana en la Calle Benalcázar frente al Convento y Plaza de San Francisco: ensanchamiento de aceras con adoquín color terracota y franja podotáctil, habilitación de terrazas gastronómicas al aire libre, rehabilitación de balcones y fachadas coloniales y pacificación del flujo vehicular en el Centro Histórico.",
     "antes": {
-      "imagen": "/antes_despues/calle_benalcazar/antes.jpg",
+      "imagen": "/antes_despues/calle_benalcazar/antes.png",
       "etiqueta": "ANTES",
-      "fecha": "Pre-Intervención",
-      "descripcion": "Calzada con asfalto agrietado y baches, aceras angostas con bolardos plásticos desgastados y entorno urbano sin vegetación ni áreas verdes."
+      "fecha": "Fase de Obra / Pre-Intervención",
+      "descripcion": "Perspectiva de la calle durante obras preliminares con cerramiento plástico en fachadas, asfalto convencional y sin terrazas comerciales ni mobiliario peatonal."
     },
     "despues": {
-      "imagen": "/antes_despues/calle_benalcazar/despues.jpg",
+      "imagen": "/antes_despues/calle_benalcazar/despues.png",
       "etiqueta": "DESPUÉS",
-      "fecha": "Centro Histórico Regenerado",
-      "descripcion": "Calle Benalcázar completamente rehabilitada con nueva capa asfáltica homogénea, jardineras cuadradas con árboles ornamentales, fachadas patrimoniales remozadas y revitalización del flujo peatonal y comercial."
+      "fecha": "Eje Turístico Inaugurado",
+      "descripcion": "Calle Benalcázar revitalizada con amplias aceras adoquinadas en tono terracota, guía podotáctil, mesas de cafetería con parasoles y jardineras, banderas patrimoniales en balcones y alta afluencia ciudadana con vista a San Francisco."
     }
   },
   {
