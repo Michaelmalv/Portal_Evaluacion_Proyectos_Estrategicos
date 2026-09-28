@@ -12,7 +12,7 @@ import {
   Coins, Footprints, Lightbulb, Wrench, Zap, TrafficCone, Paintbrush, 
   Sprout, Sofa, Fence, Construction, Video, Hammer, Info, Map as MapIcon, 
   Sparkles, ShieldCheck, FileText, CheckCircle2, ChevronDown, ChevronRight, 
-  Layers, Table, ExternalLink
+  Layers, Table, ExternalLink, Trees
 } from 'lucide-react';
 
 const MapboxMap = dynamic(() => import('./MapboxMap'), { ssr: false });
@@ -36,9 +36,14 @@ const getProyectoDisplayName = (nombre) => {
 const NORM_EQUIPMENT_MAP = {
   'isla tortuga': 'Isla Tortuga',
   'la roldos oe13 colinas del norte': 'La Roldos',
+  'la roldos': 'La Roldos',
   'av colon': 'Av Colón',
+  'av. colon': 'Av Colón',
   'av patria': 'Av Patria',
-  'calle rocafuerte': 'Calle Rocafuerte'
+  'av. patria': 'Av Patria',
+  'calle rocafuerte': 'Calle Rocafuerte',
+  'bulevar tribuna de los shyris': 'Tribuna de los Shyris',
+  'tribuna de los shyris': 'Tribuna de los Shyris'
 };
 
 export default function InformacionGeneralView({ 
@@ -910,6 +915,30 @@ export default function InformacionGeneralView({
                             <div className="equip-details">
                               <span className="equip-value">{formatArea(activeEquipRecord.jardineria)}</span>
                               <span className="equip-label">Jardinería / Paisajismo</span>
+                            </div>
+                          </div>
+                        )}
+
+                        {activeEquipRecord.arbustos_sembrados !== null && activeEquipRecord.arbustos_sembrados !== undefined && activeEquipRecord.arbustos_sembrados > 0 && (
+                          <div className="equip-card">
+                            <div className="equip-icon-wrapper blue">
+                              <Sprout size={24} />
+                            </div>
+                            <div className="equip-details">
+                              <span className="equip-value">{formatNumber(activeEquipRecord.arbustos_sembrados)}</span>
+                              <span className="equip-label">Arbustos / Ornamentales</span>
+                            </div>
+                          </div>
+                        )}
+
+                        {activeEquipRecord.arboles_sembrados !== null && activeEquipRecord.arboles_sembrados !== undefined && activeEquipRecord.arboles_sembrados > 0 && (
+                          <div className="equip-card">
+                            <div className="equip-icon-wrapper blue">
+                              <Trees size={24} />
+                            </div>
+                            <div className="equip-details">
+                              <span className="equip-value">{formatNumber(activeEquipRecord.arboles_sembrados)}</span>
+                              <span className="equip-label">Árboles sembrados</span>
                             </div>
                           </div>
                         )}
