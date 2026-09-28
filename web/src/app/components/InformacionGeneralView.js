@@ -150,6 +150,16 @@ export default function InformacionGeneralView({
     return value.toLocaleString('es-EC') + ' m';
   };
 
+  const hasValidValue = (value) => {
+    if (value === null || value === undefined) return false;
+    if (typeof value === 'number' && value === 0) return false;
+    if (typeof value === 'string') {
+      const trimmed = value.trim();
+      if (trimmed === '' || trimmed === '0' || trimmed === '—' || trimmed === 'NO' || trimmed === 'null') return false;
+    }
+    return true;
+  };
+
   const getEquipamientoData = () => {
     if (!currentProjectObj) return null;
     const norm = normalizeText(currentProjectObj.nombre);
@@ -763,52 +773,112 @@ export default function InformacionGeneralView({
                   )}
 
                   <div className="equipamiento-grid">
-                    {currentFichas.length > 0 && (
+                    {currentFichas.length > 0 ? (
                       <>
-                        <div className="equip-card">
-                          <div className="equip-icon-wrapper blue">
-                            <Building2 size={24} />
+                        {hasValidValue(currentFichas[0].ejecutor) && (
+                          <div className="equip-card">
+                            <div className="equip-icon-wrapper blue">
+                              <Building2 size={24} />
+                            </div>
+                            <div className="equip-details">
+                              <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].ejecutor}</span>
+                              <span className="equip-label">Ejecutor</span>
+                            </div>
                           </div>
-                          <div className="equip-details">
-                            <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].ejecutor || '—'}</span>
-                            <span className="equip-label">Ejecutor</span>
-                          </div>
-                        </div>
+                        )}
 
-                        <div className="equip-card">
-                          <div className="equip-icon-wrapper blue">
-                            <Calendar size={24} />
+                        {hasValidValue(currentFichas[0].fecha) && (
+                          <div className="equip-card">
+                            <div className="equip-icon-wrapper blue">
+                              <Calendar size={24} />
+                            </div>
+                            <div className="equip-details">
+                              <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].fecha}</span>
+                              <span className="equip-label">Fecha de Inauguración</span>
+                            </div>
                           </div>
-                          <div className="equip-details">
-                            <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].fecha || '—'}</span>
-                            <span className="equip-label">Fecha de Inauguración</span>
-                          </div>
-                        </div>
+                        )}
 
-                        <div className="equip-card">
-                          <div className="equip-icon-wrapper blue">
-                            <Users size={24} />
+                        {hasValidValue(currentFichas[0].beneficiarios) && (
+                          <div className="equip-card">
+                            <div className="equip-icon-wrapper blue">
+                              <Users size={24} />
+                            </div>
+                            <div className="equip-details">
+                              <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].beneficiarios}</span>
+                              <span className="equip-label">Beneficiarios</span>
+                            </div>
                           </div>
-                          <div className="equip-details">
-                            <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].beneficiarios || '—'}</span>
-                            <span className="equip-label">Beneficiarios</span>
-                          </div>
-                        </div>
+                        )}
 
-                        <div className="equip-card">
-                          <div className="equip-icon-wrapper blue">
-                            <Route size={24} />
+                        {hasValidValue(currentFichas[0].extension) && (
+                          <div className="equip-card">
+                            <div className="equip-icon-wrapper blue">
+                              <Route size={24} />
+                            </div>
+                            <div className="equip-details">
+                              <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].extension}</span>
+                              <span className="equip-label">Extensión</span>
+                            </div>
                           </div>
-                          <div className="equip-details">
-                            <span className="equip-value" style={{ fontSize: '1.15rem' }}>{currentFichas[0].extension || '—'}</span>
-                            <span className="equip-label">Extensión</span>
-                          </div>
-                        </div>
+                        )}
                       </>
+                    ) : (
+                      activeEquipRecord && (
+                        <>
+                          {hasValidValue(activeEquipRecord.administracion_zonal) && (
+                            <div className="equip-card">
+                              <div className="equip-icon-wrapper blue">
+                                <Building2 size={24} />
+                              </div>
+                              <div className="equip-details">
+                                <span className="equip-value" style={{ fontSize: '1.15rem' }}>{`Adm. Zonal ${activeEquipRecord.administracion_zonal}`}</span>
+                                <span className="equip-label">Ejecutor</span>
+                              </div>
+                            </div>
+                          )}
+
+                          {hasValidValue(activeEquipRecord.fecha_fin || currentProjectObj?.fecha_inauguracion) && (
+                            <div className="equip-card">
+                              <div className="equip-icon-wrapper blue">
+                                <Calendar size={24} />
+                              </div>
+                              <div className="equip-details">
+                                <span className="equip-value" style={{ fontSize: '1.15rem' }}>{activeEquipRecord.fecha_fin || currentProjectObj?.fecha_inauguracion}</span>
+                                <span className="equip-label">Fecha de Inauguración</span>
+                              </div>
+                            </div>
+                          )}
+
+                          {hasValidValue(activeEquipRecord.beneficiarios) && (
+                            <div className="equip-card">
+                              <div className="equip-icon-wrapper blue">
+                                <Users size={24} />
+                              </div>
+                              <div className="equip-details">
+                                <span className="equip-value" style={{ fontSize: '1.15rem' }}>{activeEquipRecord.beneficiarios}</span>
+                                <span className="equip-label">Beneficiarios</span>
+                              </div>
+                            </div>
+                          )}
+
+                          {hasValidValue(activeEquipRecord.longitud_intervenida || currentProjectObj?.extension) && (
+                            <div className="equip-card">
+                              <div className="equip-icon-wrapper blue">
+                                <Route size={24} />
+                              </div>
+                              <div className="equip-details">
+                                <span className="equip-value" style={{ fontSize: '1.15rem' }}>{activeEquipRecord.longitud_intervenida || currentProjectObj?.extension}</span>
+                                <span className="equip-label">Extensión</span>
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      )
                     )}
 
                     {activeEquipRecord ? (
-                      activeEquipRecord.presupuesto !== null && (
+                      hasValidValue(activeEquipRecord.presupuesto) && (
                         <div className="equip-card">
                           <div className="equip-icon-wrapper orange">
                             <Coins size={24} />
@@ -820,7 +890,7 @@ export default function InformacionGeneralView({
                         </div>
                       )
                     ) : (
-                      Boolean(currentFichas.length > 0 && currentFichas[0]?.presupuesto) && (
+                      Boolean(currentFichas.length > 0 && hasValidValue(currentFichas[0]?.presupuesto)) && (
                         <div className="equip-card">
                           <div className="equip-icon-wrapper orange">
                             <Coins size={24} />
@@ -835,7 +905,7 @@ export default function InformacionGeneralView({
 
                     {activeEquipRecord && (
                       <>
-                        {activeEquipRecord.cruces_seguros !== null && (
+                        {hasValidValue(activeEquipRecord.cruces_seguros) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Footprints size={24} />
@@ -847,7 +917,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.luminarias_instaladas !== null && (
+                        {hasValidValue(activeEquipRecord.luminarias_instaladas) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Lightbulb size={24} />
@@ -859,7 +929,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.luminarias_reparadas !== null && (
+                        {hasValidValue(activeEquipRecord.luminarias_reparadas) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Wrench size={24} />
@@ -871,7 +941,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.postes_intervenidos !== null && (
+                        {hasValidValue(activeEquipRecord.postes_intervenidos) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Zap size={24} />
@@ -883,7 +953,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.senales_instaladas !== null && (
+                        {hasValidValue(activeEquipRecord.senales_instaladas) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <TrafficCone size={24} />
@@ -895,7 +965,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.pintura_vial !== null && (
+                        {hasValidValue(activeEquipRecord.pintura_vial) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Paintbrush size={24} />
@@ -907,7 +977,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.jardineria !== null && (
+                        {hasValidValue(activeEquipRecord.jardineria) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Sprout size={24} />
@@ -919,7 +989,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.arbustos_sembrados !== null && activeEquipRecord.arbustos_sembrados !== undefined && activeEquipRecord.arbustos_sembrados > 0 && (
+                        {hasValidValue(activeEquipRecord.arbustos_sembrados) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Sprout size={24} />
@@ -931,7 +1001,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.arboles_sembrados !== null && activeEquipRecord.arboles_sembrados !== undefined && activeEquipRecord.arboles_sembrados > 0 && (
+                        {hasValidValue(activeEquipRecord.arboles_sembrados) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Trees size={24} />
@@ -943,7 +1013,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.mobiliario_urbano !== null && (
+                        {hasValidValue(activeEquipRecord.mobiliario_urbano) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Sofa size={24} />
@@ -955,7 +1025,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.bolardos !== null && (
+                        {hasValidValue(activeEquipRecord.bolardos) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Fence size={24} />
@@ -967,7 +1037,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.acera_intervenida !== null && activeEquipRecord.acera_intervenida !== 0 && (
+                        {hasValidValue(activeEquipRecord.acera_intervenida) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Construction size={24} />
@@ -979,7 +1049,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.bacheo !== null && activeEquipRecord.bacheo !== 0 && (
+                        {hasValidValue(activeEquipRecord.bacheo) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Hammer size={24} />
@@ -991,7 +1061,7 @@ export default function InformacionGeneralView({
                           </div>
                         )}
 
-                        {activeEquipRecord.camaras !== null && (
+                        {hasValidValue(activeEquipRecord.camaras) && (
                           <div className="equip-card">
                             <div className="equip-icon-wrapper blue">
                               <Video size={24} />
