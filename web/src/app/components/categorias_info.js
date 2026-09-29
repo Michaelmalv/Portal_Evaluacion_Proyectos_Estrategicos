@@ -1,6 +1,5 @@
 'use strict';
 import React from 'react';
-import { CRITERIOS_PMO_IMG } from './soterramiento_image_data';
 
 export const CATEGORIAS_INFO = {
   'Corredores Vivos': {
@@ -414,13 +413,6 @@ export const CATEGORIAS_INFO = {
           <li><strong>Paisaje e imagen urbana:</strong> Eliminar la severa contaminación visual en zonas residenciales, comerciales, patrimoniales y turísticas.</li>
           <li><strong>Calidad técnica del servicio:</strong> Reducir fallas e interrupciones en los servicios de energía e internet provocadas por la sobrecarga y el desorden físico.</li>
         </ul>
-
-        <div className="detail-image-container">
-          <img src={CRITERIOS_PMO_IMG} alt="Metodología y Alcance del Soterramiento - Criterios PMO" />
-          <div className="detail-image-caption">
-            Fuente: Empresa Pública Metropolitana de Movilidad y Obras Públicas (EPMMOP) / Municipio de Quito
-          </div>
-        </div>
 
         <h3>3. ¿Cómo se eligen las zonas a intervenir? (Metodología de Priorización)</h3>
         <p>
