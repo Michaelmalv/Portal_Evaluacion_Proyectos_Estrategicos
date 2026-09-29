@@ -1,0 +1,10 @@
+{
+  "name": "portal-evaluacion-proyectos-estrategicos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "vercel-build": "cd web && npm install && npm run build",
+    "build": "cd web && npm install && npm run build",
+    "start": "cd web && npm start"
+  }
+}
