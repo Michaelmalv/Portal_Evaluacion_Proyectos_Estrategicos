@@ -414,6 +414,8 @@ export const CATEGORIAS_INFO = {
           <li><strong>Calidad técnica del servicio:</strong> Reducir fallas e interrupciones en los servicios de energía e internet provocadas por la sobrecarga y el desorden físico.</li>
         </ul>
 
+
+
         <h3>3. ¿Cómo se eligen las zonas a intervenir? (Metodología de Priorización)</h3>
         <p>
           Para no intervenir de forma dispersa, el Municipio estableció <strong>14 criterios técnicos agrupados en 5 dimensiones clave</strong>:
