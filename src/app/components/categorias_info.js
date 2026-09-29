@@ -1,5 +1,6 @@
 'use strict';
 import React from 'react';
+import { CRITERIOS_PMO_IMG } from './soterramiento_image_data';
 
 export const CATEGORIAS_INFO = {
   'Corredores Vivos': {
@@ -415,7 +416,7 @@ export const CATEGORIAS_INFO = {
         </ul>
 
         <div className="detail-image-container">
-          <img src="/imagenes_categorias/soterramiento/image1.jpeg" alt="Metodología y Alcance del Soterramiento" />
+          <img src={CRITERIOS_PMO_IMG} alt="Metodología y Alcance del Soterramiento - Criterios PMO" />
           <div className="detail-image-caption">
             Fuente: Empresa Pública Metropolitana de Movilidad y Obras Públicas (EPMMOP) / Municipio de Quito
           </div>
