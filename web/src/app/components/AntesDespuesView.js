@@ -88,6 +88,7 @@ export default function AntesDespuesView({ projectName, onOpenModalImage = null 
              (pNorm.includes('shyris') && targetNorm.includes('shyris')) ||
              (pNorm.includes('patria') && targetNorm.includes('patria')) ||
              (pNorm.includes('roldos') && targetNorm.includes('roldos')) ||
+             (pNorm.includes('castilla') && targetNorm.includes('castilla')) ||
              pNorm.includes(targetNorm) || 
              targetNorm.includes(pNorm);
     }

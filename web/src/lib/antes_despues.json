@@ -106,5 +106,23 @@
       "fecha": "Eje Patrimonial Regenerado",
       "descripcion": "Ampliación de 2.830 m² para uso exclusivo del peatón, nuevo diseño de aceras rojizas con arbolado y jardineras, señalización de zona 30 y cruces protegidos con vista al emblemático Arco de Santo Domingo."
     }
+  },
+  {
+    "proyecto": "Ruiz de Castilla",
+    "titulo": "Transformación Urbana — Ruiz de Castilla",
+    "subtitulo": "Retiro de cableado aéreo, soterramiento, pavimentación y urbanismo táctico",
+    "descripcion": "Evidencia de la regeneración urbana integral en el Corredor Vivo Ruiz de Castilla: retiro total de la maraña de cables y postes aéreos en esquinas comerciales, repavimentación asfáltica de la calzada, diseño de cruces peatonales seguros con urbanismo táctico y pintura mural en calzada, nuevas luminarias ornamentales y aceras ampliadas para la accesibilidad peatonal y dinamización del comercio local.",
+    "antes": {
+      "imagen": "/antes_despues/ruiz_de_castilla/antes.png",
+      "etiqueta": "ANTES",
+      "fecha": "Pre-Intervención",
+      "descripcion": "Intersección con saturación y contaminación visual de cables aéreos en postes de hormigón, calzada con adoquines desgastados, aceras angostas y comercio informal desordenado en las esquinas."
+    },
+    "despues": {
+      "imagen": "/antes_despues/ruiz_de_castilla/despues.png",
+      "etiqueta": "DESPUÉS",
+      "fecha": "Corredor Vivo Inaugurado",
+      "descripcion": "Despeje visual completo por retiro y soterramiento de redes, calzada asfaltada con cruce cebra y mural de urbanismo táctico azul/rojo, nuevo poste de alumbrado público y aceras renovadas frente al comercio vecinal."
+    }
   }
 ]
