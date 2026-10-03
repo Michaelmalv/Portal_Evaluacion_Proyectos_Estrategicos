@@ -1748,7 +1748,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  max-height: 560px;
+  max-height: 640px;
   border-radius: 16px;
   overflow: hidden;
   user-select: none;
@@ -1756,13 +1756,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #000000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-@media (max-width: 768px) {
-  .antes-despues-slider-container {
-    aspect-ratio: 4 / 3;
-    max-height: 360px;
-  }
 }
 
 .antes-despues-img-base {
@@ -2011,6 +2004,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
+  max-height: 500px;
   background: #070c18;
   overflow: hidden;
   cursor: pointer;

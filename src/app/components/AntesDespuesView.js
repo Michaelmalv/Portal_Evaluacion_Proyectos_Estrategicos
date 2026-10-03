@@ -21,13 +21,22 @@ export default function AntesDespuesView({ projectName, onOpenModalImage = null 
   const [isDragging, setIsDragging] = useState(false);
   const [showSection, setShowSection] = useState(true);
   const [localModalImage, setLocalModalImage] = useState(null);
+  const [aspectRatio, setAspectRatio] = useState(null);
 
   const containerRef = useRef(null);
 
-  // Resetear el deslizador cuando cambia el proyecto
+  // Resetear el deslizador y aspect ratio cuando cambia el proyecto
   useEffect(() => {
     setSliderPosition(50);
+    setAspectRatio(null);
   }, [projectName]);
+
+  const handleImageLoad = (e) => {
+    if (e.target.naturalWidth && e.target.naturalHeight) {
+      const ratio = e.target.naturalWidth / e.target.naturalHeight;
+      setAspectRatio(ratio);
+    }
+  };
 
   const handleMove = useCallback((clientX) => {
     if (!containerRef.current) return;
@@ -186,165 +195,191 @@ export default function AntesDespuesView({ projectName, onOpenModalImage = null 
           </div>
 
           {/* MODO 1: DESLIZADOR INTERACTIVO (SLIDER) */}
-          {viewMode === 'slider' && (
-            <div className="antes-despues-slider-wrapper">
-              <div 
-                ref={containerRef}
-                className="antes-despues-slider-container"
-                onMouseDown={(e) => {
-                  setIsDragging(true);
-                  handleMove(e.clientX);
-                }}
-                onTouchStart={(e) => {
-                  setIsDragging(true);
-                  if (e.touches && e.touches[0]) handleMove(e.touches[0].clientX);
-                }}
-              >
-                {/* Imagen DESPUÉS (Fondo base) */}
-                <img 
-                  src={projectData.despues.imagen} 
-                  alt={projectData.despues.etiqueta}
-                  className="antes-despues-img-base"
-                />
+          {viewMode === 'slider' && (() => {
+            const isSquareOrPortrait = aspectRatio && aspectRatio <= 1.25;
+            const sliderContainerStyle = {
+              aspectRatio: aspectRatio ? `${aspectRatio}` : '16 / 9',
+              maxWidth: isSquareOrPortrait ? '620px' : '100%',
+              maxHeight: isSquareOrPortrait ? '620px' : '560px',
+              margin: '0 auto',
+              width: '100%'
+            };
 
-                {/* Imagen ANTES (Capa recortada arriba) */}
+            return (
+              <div className="antes-despues-slider-wrapper">
                 <div 
-                  className="antes-despues-img-overlay"
-                  style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
-                >
-                  <img 
-                    src={projectData.antes.imagen} 
-                    alt={projectData.antes.etiqueta}
-                    className="antes-despues-img-top"
-                  />
-                </div>
-
-                {/* Línea divisoria y manija interactiva */}
-                <div 
-                  className="antes-despues-divider-line"
-                  style={{ left: `${sliderPosition}%` }}
-                >
-                  <div className="antes-despues-handle">
-                    <ArrowLeftRight size={18} color="#ffffff" />
-                  </div>
-                </div>
-
-                {/* Badges Flotantes de Estado */}
-                <div className="antes-despues-badge badge-antes">
-                  <span className="badge-dot dot-antes"></span>
-                  <span>ANTES</span>
-                </div>
-
-                <div className="antes-despues-badge badge-despues">
-                  <span className="badge-dot dot-despues"></span>
-                  <span>DESPUÉS</span>
-                </div>
-
-                {/* Botón para abrir en pantalla completa la vista activa */}
-                <button
-                  type="button"
-                  className="antes-despues-zoom-btn"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleOpenImage(sliderPosition > 50 ? projectData.antes : projectData.despues, sliderPosition > 50 ? 'ANTES' : 'DESPUÉS');
+                  ref={containerRef}
+                  className="antes-despues-slider-container"
+                  style={sliderContainerStyle}
+                  onMouseDown={(e) => {
+                    setIsDragging(true);
+                    handleMove(e.clientX);
                   }}
-                  title="Ampliar imagen"
+                  onTouchStart={(e) => {
+                    setIsDragging(true);
+                    if (e.touches && e.touches[0]) handleMove(e.touches[0].clientX);
+                  }}
                 >
-                  <Maximize2 size={16} />
-                  <span>Ampliar</span>
-                </button>
-              </div>
-
-              {/* Control de barra deslizante inferior para accesibilidad */}
-              <div className="antes-despues-slider-controls">
-                <span className="slider-label-hint">◀ Desliza para comparar la transformación ▶</span>
-                <input 
-                  type="range" 
-                  min="0" 
-                  max="100" 
-                  value={sliderPosition}
-                  onChange={(e) => setSliderPosition(Number(e.target.value))}
-                  className="antes-despues-range-input"
-                  aria-label="Posición de comparación antes y después"
-                />
-              </div>
-            </div>
-          )}
-
-          {/* MODO 2: LADO A LADO (DUAL CARDS) */}
-          {viewMode === 'side-by-side' && (
-            <div className="antes-despues-grid">
-              {/* Tarjeta ANTES */}
-              <div className="antes-despues-card-item card-antes">
-                <div className="card-item-header">
-                  <div className="card-item-badge badge-antes-pill">
-                    <span className="badge-dot dot-antes"></span>
-                    <span>ANTES</span>
-                  </div>
-                  {projectData.antes.fecha && (
-                    <span className="card-item-date">
-                      <Clock size={14} /> {projectData.antes.fecha}
-                    </span>
-                  )}
-                </div>
-
-                <div 
-                  className="card-item-image-wrapper"
-                  onClick={() => handleOpenImage(projectData.antes, 'ANTES')}
-                  title="Haz clic para ampliar la imagen del ANTES"
-                >
-                  <img 
-                    src={projectData.antes.imagen} 
-                    alt={projectData.antes.etiqueta}
-                    className="card-item-img"
-                  />
-                  <div className="card-item-zoom-hint">
-                    <Maximize2 size={16} />
-                    <span>Ampliar</span>
-                  </div>
-                </div>
-
-                <div className="card-item-caption">
-                  <p>{projectData.antes.descripcion}</p>
-                </div>
-              </div>
-
-              {/* Tarjeta DESPUÉS */}
-              <div className="antes-despues-card-item card-despues">
-                <div className="card-item-header">
-                  <div className="card-item-badge badge-despues-pill">
-                    <span className="badge-dot dot-despues"></span>
-                    <span>DESPUÉS</span>
-                  </div>
-                  {projectData.despues.fecha && (
-                    <span className="card-item-date">
-                      <CheckCircle2 size={14} color="#10b981" /> {projectData.despues.fecha}
-                    </span>
-                  )}
-                </div>
-
-                <div 
-                  className="card-item-image-wrapper"
-                  onClick={() => handleOpenImage(projectData.despues, 'DESPUÉS')}
-                  title="Haz clic para ampliar la imagen del DESPUÉS"
-                >
+                  {/* Imagen DESPUÉS (Fondo base) */}
                   <img 
                     src={projectData.despues.imagen} 
                     alt={projectData.despues.etiqueta}
-                    className="card-item-img"
+                    className="antes-despues-img-base"
+                    onLoad={handleImageLoad}
                   />
-                  <div className="card-item-zoom-hint">
+
+                  {/* Imagen ANTES (Capa recortada arriba) */}
+                  <div 
+                    className="antes-despues-img-overlay"
+                    style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+                  >
+                    <img 
+                      src={projectData.antes.imagen} 
+                      alt={projectData.antes.etiqueta}
+                      className="antes-despues-img-top"
+                      onLoad={handleImageLoad}
+                    />
+                  </div>
+
+                  {/* Línea divisoria y manija interactiva */}
+                  <div 
+                    className="antes-despues-divider-line"
+                    style={{ left: `${sliderPosition}%` }}
+                  >
+                    <div className="antes-despues-handle">
+                      <ArrowLeftRight size={18} color="#ffffff" />
+                    </div>
+                  </div>
+
+                  {/* Badges Flotantes de Estado */}
+                  <div className="antes-despues-badge badge-antes">
+                    <span className="badge-dot dot-antes"></span>
+                    <span>ANTES</span>
+                  </div>
+
+                  <div className="antes-despues-badge badge-despues">
+                    <span className="badge-dot dot-despues"></span>
+                    <span>DESPUÉS</span>
+                  </div>
+
+                  {/* Botón para abrir en pantalla completa la vista activa */}
+                  <button
+                    type="button"
+                    className="antes-despues-zoom-btn"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleOpenImage(sliderPosition > 50 ? projectData.antes : projectData.despues, sliderPosition > 50 ? 'ANTES' : 'DESPUÉS');
+                    }}
+                    title="Ampliar imagen"
+                  >
                     <Maximize2 size={16} />
                     <span>Ampliar</span>
+                  </button>
+                </div>
+
+                {/* Control de barra deslizante inferior para accesibilidad */}
+                <div className="antes-despues-slider-controls">
+                  <span className="slider-label-hint">◀ Desliza para comparar la transformación ▶</span>
+                  <input 
+                    type="range" 
+                    min="0" 
+                    max="100" 
+                    value={sliderPosition}
+                    onChange={(e) => setSliderPosition(Number(e.target.value))}
+                    className="antes-despues-range-input"
+                    aria-label="Posición de comparación antes y después"
+                  />
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* MODO 2: LADO A LADO (DUAL CARDS) */}
+          {viewMode === 'side-by-side' && (() => {
+            const isSquareOrPortrait = aspectRatio && aspectRatio <= 1.25;
+            const cardWrapperStyle = {
+              aspectRatio: aspectRatio ? `${aspectRatio}` : '16 / 9',
+              maxHeight: isSquareOrPortrait ? '480px' : '360px'
+            };
+
+            return (
+              <div className="antes-despues-grid">
+                {/* Tarjeta ANTES */}
+                <div className="antes-despues-card-item card-antes">
+                  <div className="card-item-header">
+                    <div className="card-item-badge badge-antes-pill">
+                      <span className="badge-dot dot-antes"></span>
+                      <span>ANTES</span>
+                    </div>
+                    {projectData.antes.fecha && (
+                      <span className="card-item-date">
+                        <Clock size={14} /> {projectData.antes.fecha}
+                      </span>
+                    )}
+                  </div>
+
+                  <div 
+                    className="card-item-image-wrapper"
+                    style={cardWrapperStyle}
+                    onClick={() => handleOpenImage(projectData.antes, 'ANTES')}
+                    title="Haz clic para ampliar la imagen del ANTES"
+                  >
+                    <img 
+                      src={projectData.antes.imagen} 
+                      alt={projectData.antes.etiqueta}
+                      className="card-item-img"
+                      onLoad={handleImageLoad}
+                    />
+                    <div className="card-item-zoom-hint">
+                      <Maximize2 size={16} />
+                      <span>Ampliar</span>
+                    </div>
+                  </div>
+
+                  <div className="card-item-caption">
+                    <p>{projectData.antes.descripcion}</p>
                   </div>
                 </div>
 
-                <div className="card-item-caption">
-                  <p>{projectData.despues.descripcion}</p>
+                {/* Tarjeta DESPUÉS */}
+                <div className="antes-despues-card-item card-despues">
+                  <div className="card-item-header">
+                    <div className="card-item-badge badge-despues-pill">
+                      <span className="badge-dot dot-despues"></span>
+                      <span>DESPUÉS</span>
+                    </div>
+                    {projectData.despues.fecha && (
+                      <span className="card-item-date">
+                        <CheckCircle2 size={14} color="#10b981" /> {projectData.despues.fecha}
+                      </span>
+                    )}
+                  </div>
+
+                  <div 
+                    className="card-item-image-wrapper"
+                    style={cardWrapperStyle}
+                    onClick={() => handleOpenImage(projectData.despues, 'DESPUÉS')}
+                    title="Haz clic para ampliar la imagen del DESPUÉS"
+                  >
+                    <img 
+                      src={projectData.despues.imagen} 
+                      alt={projectData.despues.etiqueta}
+                      className="card-item-img"
+                      onLoad={handleImageLoad}
+                    />
+                    <div className="card-item-zoom-hint">
+                      <Maximize2 size={16} />
+                      <span>Ampliar</span>
+                    </div>
+                  </div>
+
+                  <div className="card-item-caption">
+                    <p>{projectData.despues.descripcion}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            );
+          })()}
         </div>
       )}
 
